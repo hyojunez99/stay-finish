@@ -1,0 +1,76 @@
+@import "./variables";
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+//모바일 기준
+@mixin font-header {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: auto;
+  color: var(--color-font);
+}
+
+@mixin font-title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: auto;
+  color: var(--color-font);
+}
+
+@mixin font-main {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: auto;
+  color: var(--color-font);
+}
+@mixin font-s {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: auto;
+  color: var(--color-font);
+}
+
+@mixin font-medium {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: auto;
+  color: var(--color-font);
+}
+
+@mixin font-small {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 400;
+  line-height: auto;
+  color: var(--color-font);
+}
+
+//데스크탑 기준
+@mixin dt-font-header {
+  font-family: "Pretendard", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: auto;
+  color: var(--color-font);
+}
+
+@mixin dt-font-title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: auto;
+  color: var(--color-font);
+}
+
+@mixin dt-font-main {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: auto;
+  color: var(--color-font);
+}

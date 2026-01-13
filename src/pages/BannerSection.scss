@@ -1,0 +1,18 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/font" as *;
+
+#banner {
+  padding-bottom: 1.5rem;
+  width: 90%;
+  .mb-banner {
+    width: 100%;
+    @include flex-layout(column, center, center, 0.5rem);
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+}

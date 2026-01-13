@@ -1,0 +1,12 @@
+@use "../assets/scss/mixin" as *;
+
+main {
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 530px;
+  }
+  @include desktop {
+    max-width: 530px;
+  }
+}

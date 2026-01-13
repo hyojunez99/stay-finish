@@ -1,0 +1,50 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/font" as *;
+
+.pc-banner {
+  display: none;
+  @include desktop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    max-width: 100%;
+    height: 100%;
+    pointer-events: none;
+    .side-banner-left,
+    .side-banner-right {
+      position: absolute;
+      pointer-events: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+      }
+    }
+    .side-banner-left {
+      @include flex-layout(column);
+      left: 220px;
+      top: 400px;
+      width: 200px;
+      .left-txt {
+        @include flex-layout(column, center, flex-start);
+        width: 100%;
+        height: 150px;
+        background: #d9d9d9;
+        padding: 1rem;
+        @include font-medium();
+      }
+    }
+    .side-banner-right {
+      right: 170px;
+      top: 500px;
+      width: 250px;
+    }
+  }
+}

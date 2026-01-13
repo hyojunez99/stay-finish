@@ -1,0 +1,205 @@
+@use "../assets/scss/variables" as *;
+@use "../assets/scss/font" as *;
+@use "../assets//scss/mixin" as *;
+
+.spot-card {
+  width: 40%;
+  height: 70px;
+  background-color: #b6add0;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1.5px solid #222;
+}
+
+.parking {
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.08);
+  max-width: 530px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 70vh;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  background-color: #fff;
+  border-radius: 2rem 2rem 0 0;
+  transform: translate(-50%, 70%);
+  transition: 0.3s;
+  @include desktop {
+    bottom: 150px;
+    height: 50vh;
+  }
+  // 테두리 처리
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    background-color: #d9d9d9;
+    border-radius: 2rem 2rem 0 0;
+    z-index: -1;
+  }
+  //주석
+  .handle {
+    cursor: pointer;
+    width: 40px;
+    height: 5px;
+    background: #111;
+    border-radius: 10px;
+    margin: 12px auto;
+  }
+
+  &.open {
+    transform: translate(-50%, 0%); /* 화면 전체로 올라옴 */
+    @include desktop {
+      transform: translate(-50%, 0); // 데스크탑도 top 기준으로 전체 보이도록
+    }
+  }
+
+  @include desktop {
+    bottom: auto; // bottom 제거
+    top: 250px; // top으로 고정
+    height: calc(100vh - 250px); // 상단부터 화면 끝까지
+  }
+}
+.APT {
+  background-color: #594886;
+  color: #fff;
+}
+.DAILY {
+  background-color: #594886;
+  color: #fff;
+}
+.PERIOD {
+  background-color: #594886;
+  color: #fff;
+}
+.STORE {
+  background-color: #e27d35;
+  color: #fff;
+}
+.shop {
+  background-color: #ff9494;
+}
+.shop.carnum {
+  background-color: #c94545;
+  color: #fff;
+}
+//주석
+.info_box {
+  position: relative;
+  .re-btn {
+    padding: 0.5rem;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    background-color: #444;
+    color: #fff;
+    border-radius: 1rem;
+    &:hover {
+      background-color: #fff;
+      color: #111;
+    }
+  }
+}
+.all_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  overflow: scroll;
+  p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .R_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 2rem;
+    text-align: center;
+    align-content: flex-start;
+  }
+  .S_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 2rem;
+    text-align: center;
+  }
+}
+
+.info-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  p {
+    @include font-main;
+  }
+}
+.color-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  .regident-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    div {
+      width: 15px;
+      height: 15px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .R {
+      background-color: #b6add0;
+    }
+    .R-P {
+      background-color: #594886;
+    }
+    .R-S {
+      background-color: #e27d35;
+    }
+  }
+  .shop-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    div {
+      width: 15px;
+      height: 15px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .S {
+      background-color: #ff9494;
+    }
+    .S-P {
+      background-color: #c94545;
+    }
+  }
+}

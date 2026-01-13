@@ -1,0 +1,29 @@
+@use "../../assets/scss/mixin" as *;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+    max-width: 530px;
+  z-index: 100;
+  .header-top {
+    width: 100%;
+    padding: 1rem;
+    @include flex-layout(row, space-between);
+    img {
+      height: 2.5rem;
+      cursor: pointer;
+    }
+  }
+  .mypage-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+    &:hover{
+      color: var(--color-font-sub);
+    }
+  }
+}

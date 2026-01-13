@@ -1,0 +1,230 @@
+@use "../assets/scss/_variables.scss" as *;
+@use "../assets/scss/_mixin.scss" as *;
+@use "../assets/scss/_font.scss" as *;
+
+/* =========================
+Layout
+========================= */
+    .login-wrap {
+    min-height: 100vh;
+    width: 100%;
+    background: #fff;
+
+    @include flex-layout(column, center, center, 0);
+    padding: 120px 16px 80px;
+
+    max-width: 920px;
+    margin: 0 auto;
+
+    @include mobile {
+        padding: 80px 16px 56px;
+    }
+    }
+
+    /* =========================
+    Logo
+    ========================= */
+    .login-logo-wrap {
+    position: relative;
+    width: 84px;
+    height: 84px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    z-index: 0;
+
+    background: radial-gradient(
+    circle at 25% 78%,
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.10) 30%,
+    rgba(0, 0, 0, 0.04) 45%,
+    rgba(0, 0, 0, 0) 55%
+    );
+
+        filter: blur(3px);
+    }
+
+    @include mobile {
+        width: 72px;
+        height: 72px;
+
+        &::before {
+        inset: -3px;
+        filter: blur(2.5px);
+        }
+    }
+    }
+
+    .login-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    }
+
+    /* =========================
+    Login Form
+    ✅ 피그마 기준 반응형 폭
+    - 375px 화면 → 330px
+    - 768px 화면 → 565px
+    - W = 105.8px + 59.8vw
+    ========================= */
+    .login-form {
+    /* 375->330 / 768->565 맞추는 수식 */
+    width: clamp(280px, calc(105.8px + 59.8vw), 760px);
+    max-width: 96vw;
+    margin: 0 auto;
+
+    @include flex-layout(column, center, stretch, 14px);
+
+    input {
+        @include font-main;
+        width: 100%;
+        height: 56px;
+        padding: 0 20px;
+        background: #f1f1f1;
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        border-radius: 999px;
+        outline: none;
+
+        &::placeholder {
+        color: var(--color-font-sub);
+        }
+
+        &:focus {
+        background: #fafafa;
+        border-color: rgba(66, 54, 100, 0.35);
+        box-shadow: 0 0 0 4px rgba(66, 54, 100, 0.12);
+        }
+
+        @include mobile {
+        height: 50px;
+        padding: 0 16px;
+        }
+    }
+
+    button[type="submit"] {
+        @include font-main;
+        width: 160px;
+        height: 44px;
+        margin: 6px auto 0;
+        border: none;
+        border-radius: 999px;
+        cursor: pointer;
+        background: #423664;
+        color: var(--color-font-white);
+
+        &:hover {
+        background: #594886;
+        box-shadow: 0 10px 10px rgba(66, 54, 50, 0.08);
+        }
+
+        &:active {
+        transform: translateY(1px);
+        box-shadow: 0 6px 14px rgba(66, 54, 100, 0.16);
+        }
+
+        @include mobile {
+        width: 140px;
+        height: 42px;
+        }
+    }
+    }
+
+    /* =========================
+    Find ID / PW
+    ========================= */
+    .login-links {
+    margin-top: 120px;
+    @include flex-layout(row, center, center, 34px);
+
+    /* 회원가입과 분리되는 구분선 */
+    position: relative;
+    padding-bottom: 18px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: min(360px, 70vw);
+        height: 1px;
+        background: rgba(0, 0, 0, 0.06);
+    }
+
+    button {
+        @include font-s;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: var(--color-font);
+        padding: 6px 4px;
+        opacity: 0.88;
+        transition: opacity 0.15s ease, color 0.15s ease;
+
+        &:hover {
+        opacity: 1;
+        color: var(--color-main-1);
+        }
+    }
+
+    @include mobile {
+        margin-top: 84px;
+        gap: 24px;
+        padding-bottom: 14px;
+
+        &::after {
+        width: min(300px, 78vw);
+        }
+    }
+    }
+
+    /* =========================
+    Sign Up CTA
+    ========================= */
+    .login-signup {
+    margin-top: 16px;
+    @include flex-layout(column, center, center, 10px);
+
+    p {
+        @include font-s;
+        color: var(--color-font-sub);
+        margin: 0;
+        opacity: 0.95;
+    }
+
+    button {
+        @include font-s;
+        border: 1px solid rgba(66, 54, 100, 0.22);
+        background: rgba(66, 54, 100, 0.06);
+        color: #423664;
+        padding: 10px 16px;
+        border-radius: 999px;
+        cursor: pointer;
+        transition:  0.15s ease, border-color 0.15s ease,
+        transform 0.12s ease, box-shadow 0.15s ease;
+
+        &:hover {
+        background: rgba(38, 31, 59, 0.1);
+        border-color: rgba(66, 54, 100, 0.35);
+        box-shadow: 0 1px 6px rgba(66, 54, 100, 0.10);
+        }
+    }
+
+    @include mobile {
+        margin-top: 12px;
+
+        button {
+        padding: 9px 14px;
+        }
+    }
+}

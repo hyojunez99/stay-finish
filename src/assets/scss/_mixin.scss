@@ -1,0 +1,32 @@
+// 모바일 기준 반응형
+$mobile: 375px;
+@mixin mobile {
+  @media all and (max-width: $mobile) {
+    @content;
+  }
+}
+
+//데스크탑 기준 반응형
+$desktop: 1440px;
+@mixin desktop {
+  @media all and (min-width: $desktop) {
+    @content;
+  }
+}
+
+//태블릿 기준 반응형
+$tablet: 768px;
+@mixin tablet {
+  @media all and (min-width: $tablet) {
+    @content;
+  }
+}
+
+// 레이아웃 플렉스
+@mixin flex-layout($dir: row, $just: center, $align: center, $gap: 1rem) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+  gap: $gap;
+}

@@ -1,0 +1,29 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/variables" as *;
+@use "../assets/scss/global.scss" as *;
+@use "../assets/scss/font.scss" as *;
+
+.residentfav {
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+    border-radius: 0 0 3rem 3rem;
+    background-color: var(--color-main-3);
+    margin: 0 auto; // 가운데 정렬
+    color: var(--color-bg);
+    padding: 1rem;
+    // 로고 고정
+    .logo {
+        width: 70px;
+        padding: 1rem 0 0 1rem;
+        // right: 0;
+    }
+    .residentfav-inner {
+        padding: 4rem 0 1rem 2rem;
+        // 최신 코드입니다!!! 절대 지우지마세요
+    }
+    .empty {
+        text-align: center;
+        line-height: 50vh;
+    }
+}

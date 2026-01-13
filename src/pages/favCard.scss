@@ -1,0 +1,53 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/variables" as *;
+@use "../assets/scss/global.scss" as *;
+@use "../assets/scss/font.scss" as *;
+
+.fav-card {
+    position: relative;
+    display: flex;
+    padding: 16px 48px 16px 16px;
+    height: 75px;
+    border-radius: 32px;
+    background-color: var(--color-sub-2);
+    overflow: hidden;
+    // margin-top: -40px; //카드겹칠 떄
+    margin-top: 15px;
+    border: 1px solid rgba(162, 149, 199, 100%);
+    box-shadow: 0 -8px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    cursor: pointer;
+    &.removing {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    .car-number{
+        @include font-header;
+        font-weight: 600;
+        color: var(--color-bg);
+        margin: 4px 0 0 10px;
+    }
+    .star {
+        position: absolute;
+        right: 16px;
+        top: 30%;
+        width: 28px;
+        height: 28px;
+        color: var(--color-main-1);
+        :hover {
+            color: var(--color-main-1-hover);
+        }
+    }
+}
+
+// 차가 없을때
+.none {
+    padding: 2rem;
+}
+.fav-cards {
+    height: calc(180px * 4);
+    overflow-y: auto;
+}
+.fav-cards::-webkit-scrollbar {
+    display: none;
+}

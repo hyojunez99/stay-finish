@@ -1,0 +1,59 @@
+.scroll-list-container {
+    position: relative;
+    width: 100%;
+    margin: 26px auto 0;
+}
+
+.scroll-list {
+    // 스크롤 리스트 전체 길이
+    max-height: 700px;
+    overflow-y: auto;
+    // padding: 1rem;
+}
+
+/* 스크롤바 */
+.scroll-list::-webkit-scrollbar {
+    width: 1px;
+}
+
+// .scroll-list::-webkit-scrollbar-track {
+//     background: #060010;
+// }
+
+// .scroll-list::-webkit-scrollbar-thumb {
+//     background: #271e37;
+//     border-radius: 4px;
+// }
+
+/* 스크롤바 숨김 옵션 */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* 상단 / 하단 그라데이션 */
+// .top-gradient {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     height: 50px;
+//     background: linear-gradient(to bottom, #060010, transparent);
+//     pointer-events: none;
+//     transition: opacity 0.3s ease;
+// }
+
+// .bottom-gradient {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     height: 100px;
+//     background: linear-gradient(to top, #060010, transparent);
+//     pointer-events: none;
+//     transition: opacity 0.3s ease;
+// }

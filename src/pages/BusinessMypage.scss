@@ -1,0 +1,120 @@
+@use "../assets/scss/mixin.scss" as *;
+@use "../assets/scss/variables.scss" as *;
+@use "../assets/scss/font.scss" as *;
+
+//사업자 마이페이지
+.business-mypage{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+//상단 카드
+.business-card{
+    position: relative;
+    background-color: var(--color-main-2);
+    border-radius: 0 0 36px 36px;
+    padding: 90px 30px 90px;
+    color: var(--color-font-white);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    //DB 연동 정보 영역
+    .mypage-info{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        .role{
+            @include font-title;
+            color: var(--color-font-white);
+        }
+        .address{
+            @include font-main;
+            opacity: 0.9;
+            color: var(--color-font-white);
+        }
+        .car-number{
+            @include font-header;
+            color: var(--color-font-white);
+        }
+        .parking-spot{
+            width: 134px;
+            padding: 6px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 12px;
+            background-color: var(--color-font-white);
+            color: #000;
+        }
+    }
+}
+//카드 버튼
+.mypage-actions{
+    position: absolute;
+    left: 50%;
+    bottom: -28px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    button{
+        width: 100px;
+        height: 50px;
+        padding: 0;
+        @include flex-layout(row,center,center);
+        border-radius: 15px;
+        border: none;
+        font-size: 12px;
+        font-weight: 500;
+        background-color: #fff;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        transition:  transform 0.15s ease, box-shadow 0.15s ease;
+        &:hover{
+            transform: translateY(-1px);
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+        }
+        &:active{
+            transform: translateY(0);
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+//메뉴 리스트
+.mypage-menu{
+    margin-top: 64px;
+    @include flex-layout(column,center,center);
+    button{
+        width: 100%;
+        max-width: 363px;
+        height: 50px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        background-color: #f2f2f2;
+        color: #000;
+        font-size: 1rem;
+        font-weight: bold;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+        &:hover{
+            background-color: var(--color-main-2-hover);
+            color: #fff;
+        }
+    }
+}
+//로그아웃
+.mypage-logout{
+    width: 128px;
+    height: 36px;
+    margin: 24px 20px 0 auto;
+    padding: 0;
+    @include flex-layout(center,center);
+    border: none;
+    border-radius: 30px;
+    background-color: var(--color-main-2);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    &:hover{
+        background-color: var(--color-main-2-hover);
+        transform: translateY(-1px);
+    }
+}

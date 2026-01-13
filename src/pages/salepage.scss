@@ -1,0 +1,79 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/variables" as *;
+@use "../assets/scss/global.scss" as *;
+@use "../assets/scss/font.scss" as *;
+
+.settlement-card {
+    // 카드 한장
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 48px 16px 16px;
+    height: 180px;
+    border-radius: 32px;
+    background-color: var(--color-main-2);
+    overflow: hidden;
+    margin-top: -40px; //카드겹칠 떄
+    border: 1px solid rgba(117, 117, 117, 0.411);
+    box-shadow: 0 -8px 4px rgba(80, 80, 80, 0.2);
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    cursor: pointer;
+    color: var(--color-bg);
+    transform: translateY(50px);
+    transition: 0.3s;
+}
+.settlement-card:hover{
+    transform: translateY(-4px);
+}
+
+.salepage {
+    // 밑 바탕
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+    border-radius: 0 0 3rem 3rem;
+    background-color: var(--color-main-3);
+    margin: 0 auto; // 가운데 정렬
+    color: var(--color-bg);
+    padding: 1rem;
+    >h1{
+        padding: 4rem 0 1rem 2rem;
+    }
+}
+.status-badge{
+    @include font-main;
+        padding: 0.5rem 1rem;
+        width: fit-content;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-bg);
+        margin-bottom: 10px
+    }
+.settlement-card-inner{
+    padding: 0 0 0 1.5rem;
+}
+// 로고 고정
+
+.store-name{
+    @include font-header;
+    font-weight: 600;
+    color: var(--color-bg);
+}
+.period{
+    @include font-main;
+    margin-top: 8px;
+    font-weight: 200;
+    color: var(--color-bg);
+}
+
+.amount{
+    @include font-header;
+    font-weight: 400;
+    color: var(--color-bg);
+}
+
+
+

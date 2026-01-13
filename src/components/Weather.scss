@@ -1,0 +1,20 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/font" as *;
+
+#weather-page {
+  .weather {
+    @include font-medium();
+    color: #fff;
+    @include flex-layout(row, flex-start, center, 0.5rem);
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+    .top {
+      @include flex-layout(column, center, flex-start, 0.5rem);
+      .title {
+        @include flex-layout(row, center, center, 0.5rem);
+      }
+    }
+  }
+}
