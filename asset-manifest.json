@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/stay-finish/static/css/main.13865cfc.css",
+    "main.js": "/stay-finish/static/js/main.0f81e17b.js",
+    "static/media/DT_Banner_HM.jpg": "/stay-finish/static/media/DT_Banner_HM.5e2164d110ee2ad88658.jpg",
+    "static/media/DT_Banner.BRjpg.jpg": "/stay-finish/static/media/DT_Banner.BRjpg.7dfe4e5df3178d4aea91.jpg",
+    "static/media/DT_Banner_ST.jpg": "/stay-finish/static/media/DT_Banner_ST.4d359d58ad77df3fb7bb.jpg",
+    "static/media/DT_Banner_LN.jpg": "/stay-finish/static/media/DT_Banner_LN.365cd4b8a5ca341f93cf.jpg",
+    "static/media/admin-img.png": "/stay-finish/static/media/admin-img.6b98999d4c084ccd33a1.png",
+    "static/media/DT_Banner_cafe.jpg": "/stay-finish/static/media/DT_Banner_cafe.6c6949d6c069d5a6605c.jpg",
+    "static/media/MB_Banner_HM.jpg": "/stay-finish/static/media/MB_Banner_HM.ea007fecc2e951579168.jpg",
+    "static/media/MB_Banner_cafe.jpg": "/stay-finish/static/media/MB_Banner_cafe.99d748d022e14c55ad1a.jpg",
+    "static/media/DT_Banner_HO.jpg": "/stay-finish/static/media/DT_Banner_HO.a6536e88554abec6e7c4.jpg",
+    "static/media/MB_Banner_BR.jpg": "/stay-finish/static/media/MB_Banner_BR.2806f6f11da5bf30fae3.jpg",
+    "static/media/MB_Banner_ST.jpg": "/stay-finish/static/media/MB_Banner_ST.33d8cbf7a3567eb46268.jpg",
+    "static/media/MB_Banner_LN.jpg": "/stay-finish/static/media/MB_Banner_LN.1d9ef9a98d0257a9e58e.jpg",
+    "static/media/MB_Banner_HO.jpg": "/stay-finish/static/media/MB_Banner_HO.194ab3aaa1ea2942440b.jpg",
+    "static/media/logo-2.png": "/stay-finish/static/media/logo-2.3ba4b8b25353159b60d2.png",
+    "static/media/EG_logo.png": "/stay-finish/static/media/EG_logo.804649bafff067286920.png",
+    "static/media/EGWH_logo.png": "/stay-finish/static/media/EGWH_logo.6c85dc36ebab46b6a297.png",
+    "static/media/Star.svg": "/stay-finish/static/media/Star.ce60458c766c75cbeb873b0164965035.svg",
+    "index.html": "/stay-finish/index.html",
+    "main.13865cfc.css.map": "/stay-finish/static/css/main.13865cfc.css.map",
+    "main.0f81e17b.js.map": "/stay-finish/static/js/main.0f81e17b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13865cfc.css",
+    "static/js/main.0f81e17b.js"
+  ]
+}
