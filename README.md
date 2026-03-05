@@ -9,7 +9,7 @@
 - **개발 인원:** 6인 팀 프로젝트  
 - **배포 링크:** [Stay-Finish](https://hyojunez99.github.io/stay-finish/)  
 - **GitHub:** [Repository Link](https://github.com/hyojunez99/stay-finish.git)  
-- **PDF:** [stay.pdf](stay.pdf)
+- **PDF:** [stay.pdf](assets/pdf/stay.pdf)
 
 ---
 
